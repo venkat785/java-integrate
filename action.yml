@@ -1,0 +1,13 @@
+name: 'adding parameters'
+description: 'Github action will have 4 parameters while executing'
+inputs:
+  - const owner: process.argv[2];
+  - const repository: process.argv[3];
+  - const base: process.argv[4];
+  - const head:  process.argv[5];
+outputs:
+  output: # id of output
+    description: 'echo output'
+runs:
+  using: 'node16'
+  main: 'index.js'

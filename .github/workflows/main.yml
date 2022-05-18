@@ -1,0 +1,19 @@
+on: [push] #on push.
+
+jobs:
+  adding-parameters:
+    runs-on: ubuntu-latest
+    name: Added parameters to the workflow
+    steps:
+      - name: Added parameters
+        id: hello
+        uses: venkat785/java-integrate
+        with:
+          owner: 'venkat'
+          repository: 'java-integrate'
+          base: 'main'
+          head: 'branch'
+      # Use the output from the `hello` step
+      - name: Get the output 
+        run: echo "The output was ${{ steps.hello.outputs.output }}"
+        
