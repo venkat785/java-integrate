@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: Added parameters
         id: hello
-        uses: venkat785/java-integrate@v1.1
+        uses: venkat785/java-integrate@v1.2
         with:
           owner: 'venkat'
           repository: 'java-integrate'
