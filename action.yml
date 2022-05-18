@@ -1,4 +1,4 @@
-name: 'adding parameters'
+name: 'adding parameters to the workflow'
 description: 'Github action will have 4 parameters while executing'
 inputs:
   - const owner: process.argv[2];
