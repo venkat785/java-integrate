@@ -3,7 +3,6 @@ const github = require('@actions/github');
 
 try {
   // `parameters` input defined 
-  
   const owner = process.argv[2];
   const repository = process.argv[3];
   const base = process.argv[4];
