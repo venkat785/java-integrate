@@ -1,4 +1,4 @@
-on: [push] #on push.
+on: [push] #on every push
 
 jobs:
   adding-parameters:
