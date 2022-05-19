@@ -3,7 +3,7 @@ const github = require('@actions/github');
 
 try {
   // `parameters` input defined 
-  action metadata file
+  
   const owner = process.argv[2];
   const repository = process.argv[3];
   const base = process.argv[4];
