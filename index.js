@@ -3,10 +3,10 @@ const github = require('@actions/github');
 
 try {
   // `parameters` input defined 
-  const owner = process.argv[2];
-  const repository = process.argv[3];
-  const base = process.argv[4];
-  const head = process.argv[5];
+  const owner = core.getInput('owner');
+  const repository = core.getInput('repository');
+  const base = core.getInput('base');
+  const head = core.getInput('head');
   const output = 'ouptut + = ' + owner +' '+ repository +' ' + base +' ' + head; 
   console.log(output );
   const time = (new Date()).toTimeString();
