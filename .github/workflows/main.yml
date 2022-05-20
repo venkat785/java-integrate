@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: Added parameters
         id: Parameters
-        uses: venkat785/java-integrate@main
+        uses: yaniktheyak/java-integrate@main
         with:
           owner: 'Quest'
           repository: 'java-integrate'
