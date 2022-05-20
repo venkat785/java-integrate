@@ -1,15 +1,15 @@
-on: 
-  push: 
-    branches: main
+on:
+  push:
+    branches: jsdev
 
 jobs:
-  adding-parameters:
+  adding-Octokit:
     runs-on: ubuntu-latest
     name: Added parameters to the workflow
     steps:
-      - name: Added parameters
+      - name: importing Octokit
         id: hello
-        uses: venkat785/java-integrate@main
+        uses: venkat785/java-integrate@jsdev
         with:
           owner: 'Quest'
           repository: 'java-integrate'
@@ -18,4 +18,3 @@ jobs:
       # Use the output from the `hello` step
       - name: Get the output 
         run: echo "The output was ${{ steps.hello.outputs.output }}"
-        
