@@ -1,13 +1,17 @@
 name: 'import octokit'
 description: 'see the result'
-inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
+import:
+  dotenv:  # id of input
+    description: 'importing'
     required: true
     default: 'World'
+  Octokit: 
+    description: 'importing Octokit'
+    required: true
+    default: 'world'
 outputs:
   time: # id of output
-    description: 'The time we greeted you'
+    description: 'The of executed'
 runs:
   using: 'node16'
-  main: 'index.js'
+  main: 'main.js'

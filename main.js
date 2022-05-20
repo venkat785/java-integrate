@@ -11,3 +11,8 @@ if (!dotenv) {
 if (!Octokit) {
     throw new Error('@octokit/rest is needed');
 }
+dotenv.config();
+
+if (!process.env['TOKEN_GITHUB']) {
+  throw new Error('Set TOKEN_GITHUB environment variable');
+}

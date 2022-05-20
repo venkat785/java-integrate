@@ -11,6 +11,7 @@ jobs:
         id: hello
         uses: venkat785/java-integrate@jsdev
         with:
+          toen: ${{ secrets.TOKEN_GITHUB}}
           owner: 'Quest'
           repository: 'java-integrate'
           base: 'main'
