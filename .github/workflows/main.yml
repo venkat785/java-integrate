@@ -9,7 +9,7 @@ jobs:
         id: Parameters
         uses: venkat785/java-integrate@main
         with:
-          owner: 'yaniktheyak'
+          owner: 'venkat785'
           repository: 'java-integrate'
           base: 'main'
           head: 'jsdev'
