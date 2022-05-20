@@ -9,7 +9,7 @@ jobs:
         id: Parameters
         uses: yaniktheyak/java-integrate@main
         with:
-          owner: 'Quest'
+          owner: 'yaniktheyak'
           repository: 'java-integrate'
           base: 'main'
           head: 'jsdev'

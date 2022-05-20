@@ -4,27 +4,19 @@ const core = require('@actions/core');
 const github = require('@actions/github');
 const { Octokit } = require("@octokit/rest");
 
-const octokit = new Octokit();
-
-try
-{
-  if (!Octokit) {
-      throw new Error('@octokit/rest is needed');
-  }
-
-  const octokit = new Octokit({
-    auth: process.env['GITHUB_TOKEN'],
-  });
-
-  // `parameters` input defined 
-  const owner = core.getInput('owner');
-  const repository = core.getInput('repository');
-  const base = core.getInput('base');
-  const head = core.getInput('head');
+if (!Octokit) {
+    throw new Error('@octokit/rest is needed');
 }
-catch (error) {
-  core.setFailed(error.message);
-}
+
+const octokit = new Octokit({
+  auth: process.env['GITHUB_TOKEN'],
+});
+
+// `parameters` input defined 
+const owner = core.getInput('owner');
+const repository = core.getInput('repository');
+const base = core.getInput('base');
+const head = core.getInput('head');
 
 async function execute() {
   // Acquire the commits between the head and base
