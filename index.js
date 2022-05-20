@@ -2,8 +2,9 @@
 
 const core = require('@actions/core');
 const github = require('@actions/github');
-import * as dotenv from 'dotenv';
-import { Octokit } from '@octokit/rest';
+const { Octokit } = require("@octokit/rest");
+
+const octokit = new Octokit();
 
 try
 {
