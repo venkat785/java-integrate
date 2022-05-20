@@ -13,6 +13,6 @@ if (!Octokit) {
 }
 dotenv.config();
 
-if (!process.env['TOKEN_']) {
+if (!process.env['TOKEN_GITHUB']) {
   throw new Error('Set TOKEN_GITHUB environment variable');
 }
