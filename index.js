@@ -8,14 +8,9 @@ const octokit = new Octokit();
 
 try
 {
-  if (!dotenv) {
-      throw new Error('dotenv is needed');
-  }
-
   if (!Octokit) {
       throw new Error('@octokit/rest is needed');
   }
-  dotenv.config();
 
   const octokit = new Octokit({
     auth: process.env['GITHUB_TOKEN'],
