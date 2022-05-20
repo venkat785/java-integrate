@@ -74,4 +74,4 @@ async function execute() {
   console.log(`The event payload: ${payload}`);
 }
 
-execute().catch((e) => core.setFailed(error.message));
+execute().catch((e) => core.setFailed(e.message));
