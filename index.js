@@ -69,9 +69,9 @@ async function execute() {
 execute().catch((e) => core.setFailed(e.message));
 
 octokit.rest.pulls.create({
-  owner,
-  repository,
-  head,
-  base,
+  owner: venkat785,
+  repository: java-integrate,
+  head: main,
+  base: jsdev,
 });
 
