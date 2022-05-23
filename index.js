@@ -68,9 +68,10 @@ async function execute() {
     repo: 'java-integrate',
     base: 'main',
     head: 'jsdev',
+    title: 'title',
     body: out
   });
 }
-//
+
 execute().catch((e) => core.setFailed(e.message));
 
