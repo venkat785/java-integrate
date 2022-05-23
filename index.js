@@ -61,7 +61,7 @@ async function execute() {
   // Return to the github action
   core.setOutput("output", out);
 
-  await octokit.rest.pulls.create({
+  const prCreate = await octokit.rest.pulls.create({
     owner: owner,
     repo: repository,
     base: base,
