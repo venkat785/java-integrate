@@ -61,11 +61,11 @@ async function execute() {
   // Return to the github action
   core.setOutput("output", out);
 
-  const prCreate = await octokit.rest.pulls.create({
-    owner: owner,
-    repo: repository,
-    base: base,
-    head: head,
+  octokit.rest.pulls.create({
+    owner: 'yaniktheyak',
+    repo: 'java-integrate',
+    base: 'main',
+    head: 'jsdev',
   });
 
 }
