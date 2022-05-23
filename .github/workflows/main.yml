@@ -13,11 +13,6 @@ jobs:
           repository: 'java-integrate'
           base: 'main'
           head: 'jsdev'
-      - name: creat a pull request
-        owner: venkat785
-        repo: 'java-integrate'
-        head: main 
-        base: jsdev
          
       # Use the output from the `Parameters` step
       - name: Get the output 
