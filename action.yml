@@ -17,7 +17,7 @@ inputs:
     description: 'head'
     required: true
     default: 'main'
-  head:
+  token:
     description: 'token'
     required: true
     default: 'missing'
