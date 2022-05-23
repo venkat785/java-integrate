@@ -8,10 +8,8 @@ if (!Octokit) {
     throw new Error('@octokit/rest is needed');
 }
 
-const token = core.getInput('token');
-
 const octokit = new Octokit({
-  auth: process.env[token],
+  auth: process.env['GITHUB_TOKEN'],
 });
 
 // `parameters` input defined 
