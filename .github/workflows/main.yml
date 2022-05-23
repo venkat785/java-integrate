@@ -1,5 +1,9 @@
 on: [push] #on every push
 
+permissions:
+  read-all
+  pull-requests: write
+
 jobs:
   adding-parameters:
     runs-on: ubuntu-latest
