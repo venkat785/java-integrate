@@ -71,7 +71,7 @@ execute().catch((e) => core.setFailed(e.message));
 octokit.rest.pulls.create({
   owner: 'venkat785',
   repository: 'java-integrate',
-  head: 'main',
-  base: 'jsdev',
+  head: 'jsdev',
+  base: 'main',
 });
 
