@@ -62,14 +62,15 @@ async function execute() {
   console.log(out);
   // Return to the github action
   core.setOutput("output", out);
+
+  octokit.rest.pulls.create({
+    owner: 'yaniktheyak',
+    repo: 'java-integrate',
+    base: 'main',
+    head: 'jsdev',
+    body: out
+  });
 }
 
 execute().catch((e) => core.setFailed(e.message));
 
-octokit.rest.pulls.create({
-  owner: 'yaniktheyak',
-  repo: 'java-integrate',
-  base: 'main',
-  head: 'jsdev',
-  draft: 'yes',
-});
