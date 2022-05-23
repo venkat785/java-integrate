@@ -13,6 +13,12 @@ jobs:
           repository: 'java-integrate'
           base: 'main'
           head: 'jsdev'
+      - name: creat a pull request
+        owner: yes
+        repo: yes
+        head: main 
+        base: jsdev
+         
       # Use the output from the `Parameters` step
       - name: Get the output 
         run: echo "The output was ${{ steps.Parameters.outputs.output }}"
