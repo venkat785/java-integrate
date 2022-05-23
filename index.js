@@ -66,8 +66,6 @@ async function execute() {
     repo: repository,
     base: base,
     head: head,
-    title: 'This is a PR',
-    body: out,
   });
 
 }
