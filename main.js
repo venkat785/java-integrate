@@ -16,3 +16,6 @@ dotenv.config();
 if (!process.env['TOKEN_GITHUB']) {
   throw new Error('Set TOKEN_GITHUB environment variable');
 }
+const octokit = new Octokit({
+    auth: process.env['GITHUB_TOKEN'],
+});
