@@ -14,8 +14,8 @@ jobs:
           base: 'main'
           head: 'jsdev'
       - name: creat a pull request
-        owner: yes
-        repo: yes
+        owner: venkat785
+        repo: 'java-integrate'
         head: main 
         base: jsdev
          
