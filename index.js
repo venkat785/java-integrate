@@ -69,4 +69,5 @@ octokit.rest.pulls.create({
   repo: 'java-integrate',
   base: 'main',
   head: 'jsdev',
+  draft: 'yes',
 });
