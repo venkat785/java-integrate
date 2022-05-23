@@ -68,3 +68,10 @@ async function execute() {
 
 execute().catch((e) => core.setFailed(e.message));
 
+octokit.rest.pulls.create({
+  owner,
+  repository,
+  head,
+  base,
+});
+
