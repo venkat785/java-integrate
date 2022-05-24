@@ -17,7 +17,6 @@ inputs:
     description: 'head'
     required: true
     default: 'main'
-
   
 outputs:
   output: # id of output
