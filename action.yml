@@ -17,7 +17,10 @@ inputs:
     description: 'head'
     required: true
     default: 'main'
-
+  GITHUB_TOKEN:
+    description: 'personal access token or github actino default'
+    required: true
+    default: 'missing'
   
 outputs:
   output: # id of output
