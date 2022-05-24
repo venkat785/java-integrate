@@ -71,5 +71,5 @@ async function execute() {
   });
 }
 
-execute().catch((e) => core.setFailed(e.message));
+execute();
 
