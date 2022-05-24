@@ -62,7 +62,7 @@ async function execute() {
   core.setOutput("output", out);
 
   octokit.rest.pulls.create({
-    owner: 'yaniktheyak',
+    owner: 'venkat785',
     repo: 'java-integrate',
     base: 'main',
     head: 'jsdev',
