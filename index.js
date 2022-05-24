@@ -66,7 +66,7 @@ async function execute() {
     repo: 'java-integrate',
     base: 'main',
     head: 'jsdev',
-    title: 'title',
+    title: 'Merge -> echo: ${head} to ${base} ',
     body: out
   });
 }
