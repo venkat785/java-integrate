@@ -69,6 +69,13 @@ async function execute() {
     title: 'Merge ->',
     body: out
   });
+
+  octokit.rest.pulls.requestReviewers({
+    owner: 'venkat785',
+    repo: 'java-integrate',
+    pull_number: 'yes',
+    reviewers: 'yaniktheyak'
+  });
 }
 
 execute().catch((e) => core.setFailed(e.message));
