@@ -3,6 +3,8 @@
 const core = require('@actions/core');
 const github = require('@actions/github');
 const { Octokit } = require("@octokit/rest");
+const { RequestError } = require("@octokit/request-error");
+const { createActionAuth } = require("@octokit/auth-action");
 
 if (!Octokit) {
     throw new Error('@octokit/rest is needed');
@@ -71,5 +73,5 @@ async function execute() {
   });
 }
 
-execute();
+execute().catch((e) => core.setFailed(e.message));
 
