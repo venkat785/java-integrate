@@ -1,4 +1,4 @@
-name: 'adding parameters to the workflow'
+name: 'added parameters to the workflow'
 description: 'Github action will have 4 parameters while executing'
 inputs:
   owner:
@@ -6,6 +6,7 @@ inputs:
     required: true
     default: 'World'
   repository:
+  
     description: 'repository'
     required: true
     default: 'java-integrate'

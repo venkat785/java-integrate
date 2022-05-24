@@ -15,7 +15,6 @@ jobs:
           head: 'jsdev'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          
       # Use the output from the `Parameters` step
       - name: Get the output 
         run: echo "The output was ${{ steps.Parameters.outputs.output }}"
