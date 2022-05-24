@@ -17,8 +17,7 @@ inputs:
   head:
     description: 'head'
     required: true
-    default: 'jsdev'
-
+    default: 'main'
   
 outputs:
   output: # id of output
