@@ -74,7 +74,9 @@ async function execute() {
     owner: 'venkat785',
     repo: 'java-integrate',
     pull_number: 'yes',
-    reviewers: 'yaniktheyak'
+    reviewers: [
+      'venkat785'
+    ]
   });
 }
 
