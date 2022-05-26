@@ -70,7 +70,7 @@ async function execute() {
     body: 'please review the PR'
   });
 
-  octokit.rest.pulls.requestReviewers({
+  await octokit.rest.pulls.requestReviewers({
     owner: 'venkat785',
     repo: 'java-integrate',
     pull_number: '16',
