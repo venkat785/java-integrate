@@ -71,7 +71,6 @@ async function execute() {
   });
 
   octokit.rest.pulls.requestReviewers({
-    pull_number: 'yes',
     reviewers: [
       'venkat785'
     ]
