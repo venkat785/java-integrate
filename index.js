@@ -61,7 +61,7 @@ async function execute() {
   // Return to the github action
   core.setOutput("output", out);
 
-  octokit.rest.pulls.create({
+  await octokit.rest.pulls.create({
     owner: 'venkat785',
     repo: 'java-integrate',
     base: 'main',
@@ -73,7 +73,7 @@ async function execute() {
   octokit.rest.pulls.requestReviewers({
     owner: 'venkat785',
     repo: 'java-integrate',
-    pull_number: '15',
+    pull_number: '16',
     reviewers: [
       'venkat785'
     ],
