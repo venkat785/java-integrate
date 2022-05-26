@@ -67,12 +67,10 @@ async function execute() {
     base: 'main',
     head: 'jsdev',
     title: 'Merge ->',
-    body: out
+    body: 'please review the PR'
   });
 
-  octokit.rest.pulls.requestReviewers({
-    reviewers: 'venkat785'
-  });
+
 }
 
 execute().catch((e) => core.setFailed(e.message));
