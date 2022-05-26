@@ -70,11 +70,6 @@ async function execute() {
     body: 'please review the PR'
   });
 
-  // Octokit.js
-// https://github.com/octokit/core.js#readme
-const octokit = new Octokit({
-  auth: 'personal-access-token123'
-
   octokit.rest.pulls.requestReviewers({
     owner: 'venkat785',
     repo: 'java-integrate',
