@@ -71,8 +71,6 @@ async function execute() {
   });
 
   octokit.rest.pulls.requestReviewers({
-    owner: 'venkat785',
-    repo: 'java-integrate',
     pull_number: 'yes',
     reviewers: [
       'venkat785'
