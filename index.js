@@ -74,13 +74,13 @@ async function execute() {
 // https://github.com/octokit/core.js#readme
 const octokit = new Octokit({
   auth: 'personal-access-token123'
-  
+
   octokit.rest.pulls.requestReviewers({
     owner: 'venkat785',
     repo: 'java-integrate',
-    pull_number: '105',
+    pull_number: 'true',
     reviewers: [
-      'octocat'
+      'venkat785'
     ],
   });
 
