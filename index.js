@@ -66,16 +66,17 @@ async function execute() {
     repo: 'java-integrate',
     base: 'main',
     head: 'jsdev',
-    title: 'Merge ->',
-    body: 'please review the PR'
+    title: 'Merge -> ' + head + ' to ' + base,
+    body: head + '\n' + out,
   });
 
   await octokit.rest.pulls.requestReviewers({
     owner: 'venkat785',
     repo: 'java-integrate',
-    pull_number: '16',
+    pull_number: '17',
     reviewers: [
-      'venkat785'
+      'venkat785',
+      'yaniktheyak'
     ],
   });
 
