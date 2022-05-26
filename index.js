@@ -75,7 +75,7 @@ async function execute() {
     repo: 'java-integrate',
     pull_number: '105',
     reviewers: [
-      'venkat785'
+      'octocat'
     ],
   });
 
