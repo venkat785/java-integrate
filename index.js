@@ -73,7 +73,7 @@ async function execute() {
   octokit.rest.pulls.requestReviewers({
     owner: 'venkat785',
     repo: 'java-integrate',
-    pull_number: 'true',
+    pull_number: '15',
     reviewers: [
       'venkat785'
     ],
