@@ -37,8 +37,8 @@ async function execute() {
   core.setOutput("output", out);
 
   // Get the JSON webhook payload for the event that triggered the workflow
-  const payload = JSON.stringify(github.context.payload, undefined, 2)
-  console.log('The event payload: ${payload}');
+  //const payload = JSON.stringify(github.context.payload, undefined, 2)
+  //console.log('The event payload: ${payload}');
 }
 
 execute().catch((e) => core.setFailed(e.message));

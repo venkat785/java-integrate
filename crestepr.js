@@ -82,9 +82,3 @@ async function execute() {
 }
 
 execute().catch((e) => core.setFailed(e.message));
-
-const { data: { branch } } = await octokit.repos.getBranch({
-    owner: owner,
-    repo: repository,
-    branch: base,
-});
