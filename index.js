@@ -20,7 +20,7 @@ const head = core.getInput('head');
 
 async function execute() {
   // Acquire the commits between the head and base
-  await octokit.request.getBranch({
+  const { data: { branch } } = await octokit.repos.getBranch({
     owner: owner,
     repo: repository,
     branch: base,
