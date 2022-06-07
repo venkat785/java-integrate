@@ -26,7 +26,7 @@ async function execute() {
     branch: base,
   });
 
-  var sha1 = branch.Commit.Sha();
+  var sha1 = branch.commit.Sha();
 
   // Process each PRs details into a single string
   var out = 'Owner:' + owner + '\nRepository:' + repository + '\nBase:' + base + '\Sha1:' + sha1 + '\n';
