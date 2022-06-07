@@ -23,7 +23,7 @@ async function execute() {
   const { data: { branch } } = await octokit.repos.getBranch({
     owner: owner,
     repo: repository,
-    branch: base,
+    branch: 'dev',
   });
 
   var sha1 = branch.Commit.Sha();
