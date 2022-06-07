@@ -20,13 +20,13 @@ const head = core.getInput('head');
 
 async function execute() {
   // Acquire the commits between the head and base
-  const { data: { branch } } = await octokit.repos.getBranch({
+  await octokit.request.getBranch({
     owner: owner,
     repo: repository,
     branch: base,
   });
 
-  var sha1 = branch.commit.Sha();
+  var sha1 = branch.Commit.Sha();
 
   // Process each PRs details into a single string
   var out = 'Owner:' + owner + '\nRepository:' + repository + '\nBase:' + base + '\Sha1:' + sha1 + '\n';
