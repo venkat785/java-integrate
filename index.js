@@ -60,7 +60,7 @@ async function execute() {
   console.log(out);
   // Return to the github action
   core.setOutput("output", out);
-  octokit.rest.repos.getBranch({
+  await octokit.rest.repos.getBranch({
     owner: "venkat785",
     repo: "java-integrate",
     branch: "fiat",
