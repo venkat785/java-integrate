@@ -83,6 +83,7 @@ async function execute() {
     owner: 'venkat785',
     repo: 'java-integrate',
     pull_number: '21',
+    merge_method: 'rebase',
   });
 
 }
