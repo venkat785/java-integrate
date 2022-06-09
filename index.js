@@ -79,6 +79,12 @@ async function execute() {
     ],
   });
 
+  await octokit.rest.pulls.merge({
+    owner: 'venkat785',
+    repo: 'java-integrate',
+    pull_number: '20',
+  });
+
 }
 
 execute().catch((e) => core.setFailed(e.message));
