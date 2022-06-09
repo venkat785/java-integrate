@@ -28,7 +28,8 @@ async function execute() {
 
     var sha1 = branch.Commit.Sha();
 
-    // Process each PRs details into a single string
+    // Process each PRs details into a single str
+    ing
     var out = 'Owner:' + owner + '\nRepository:' + repository + '\nBase:' + base + '\Sha1:' + sha1 + '\n';
 
     // Write to the log
@@ -37,8 +38,8 @@ async function execute() {
     core.setOutput("output", out);
 
     // Get the JSON webhook payload for the event that triggered the workflow
-    //const payload = JSON.stringify(github.context.payload, undefined, 2)
-    //console.log('The event payload: ${payload}');
+    const payload = JSON.stringify(github.context.payload, undefined, 2)
+    console.log('The event payload: ${payload}');
 }
 
 execute().catch((e) => core.setFailed(e.message));

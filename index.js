@@ -60,10 +60,23 @@ async function execute() {
   console.log(out);
   // Return to the github action
   core.setOutput("output", out);
-  await octokit.rest.repos.getBranch({
-    owner: "venkat785",
-    repo: "java-integrate",
-    branch: "fiat",
+
+  await octokit.rest.pulls.create({
+    owner: 'venkat785',
+    repo: 'java-integrate',
+    base: 'main',
+    head: 'jsdev',
+    title: 'Merge -> ' + head + ' to ' + base,
+    body: head + '\n' + out,
+  });
+
+  await octokit.rest.pulls.requestReviewers({
+    owner: 'venkat785',
+    repo: 'java-integrate',
+    pull_number: '18',
+    reviewers: [
+      'venkat785'
+    ],
   });
 
 }
