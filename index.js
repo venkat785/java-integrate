@@ -73,7 +73,7 @@ async function execute() {
   await octokit.rest.pulls.requestReviewers({
     owner: 'venkat785',
     repo: 'java-integrate',
-    pull_number: '18',
+    pull_number: '21',
     reviewers: [
       'venkat785'
     ],
@@ -82,7 +82,7 @@ async function execute() {
   await octokit.rest.pulls.merge({
     owner: 'venkat785',
     repo: 'java-integrate',
-    pull_number: '20',
+    pull_number: '21',
   });
 
 }
