@@ -62,7 +62,7 @@ async function execute() {
   // Return to the github action
   core.setOutput("output", out);
 
-  octokit.rest.repos.getBranch({
+  await octokit.rest.repos.getBranch({
     owner,
     repo,
     branch,
