@@ -63,9 +63,9 @@ async function execute() {
   core.setOutput("output", out);
 
   await octokit.rest.repos.getBranch({
-    owner,
-    repo,
-    branch,
+    owner: 'venkat785',
+    repo: 'java-integrate',
+    branch: 'feature',
   });
 
 }
