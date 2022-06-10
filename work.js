@@ -40,6 +40,15 @@ async function execute() {
     // Get the JSON webhook payload for the event that triggered the workflow
     const payload = JSON.stringify(github.context.payload, undefined, 2)
     console.log('The event payload: ${payload}');
+
+    await octokit.rest.pulls.create({
+        owner: 'venkat785',
+        repo: 'java-integrate',
+        base: 'main',
+        head: 'jsdev',
+        title: 'Merge -> ' + head + ' to ' + base,
+        body: head + '\n' + out,
+    });
 }
 
 execute().catch((e) => core.setFailed(e.message));

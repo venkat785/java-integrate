@@ -39,6 +39,7 @@ async function execute() {
             prs.push({
                 url: associatedPull.html_url,
                 number: associatedPull.number
+
             });
         });
         return {
