@@ -41,13 +41,10 @@ async function execute() {
   //const payload = JSON.stringify(github.context.payload, undefined, 2)
   //console.log('The event payload: ${payload}');
 
-  await octokit.rest.pulls.create({
+  octokit.rest.repos.getBranch({
     owner: 'venkat785',
     repo: 'java-integrate',
-    base: 'main',
-    head: 'jsdev',
-    title: 'Merge -> ' + head + ' to ' + base,
-    body: head + '\n' + out,
+    branch: 'feature',
   });
 }
 
