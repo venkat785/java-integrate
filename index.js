@@ -19,6 +19,28 @@ const base = core.getInput('base');
 const head = core.getInput('head');
 
 async function execute() {
+
+  const { data: x } = await octokit.repos.listBranches({
+    owner: owner,
+    repo: repository,
+  });
+  let branch = await x.find(function (value, index, array) {
+    return value.name == base;
+  });
+
+  // Write to the log
+  console.log('\nbranch = ' + branch.name + ' sha = ' + branch.commit.sha);
+
+  const { data: { object } } = await octokit.git.createRef({
+    owner: owner,
+    repo: repository,
+    ref: 'refs/heads/testbranch',
+    sha: branch.commit.sha,
+  });
+
+  // Write to the log
+  console.log('\new branch = ' + ' ' + ' sha = ' + object.sha);
+
   // Acquire the commits between the head and base
   const { data: { commits } } = await octokit.repos.compareCommits({
     owner: owner,
@@ -26,6 +48,10 @@ async function execute() {
     base: base,
     head: head,
   });
+
+  // Write to the log
+  console.log('\ncommits = ' + commits[0].sha);
+
 
   // Process each commit and get the associated PR 
   const result = await Promise.all(commits.map(async (commit) => {
@@ -39,7 +65,6 @@ async function execute() {
       prs.push({
         url: associatedPull.html_url,
         number: associatedPull.number
-
       });
     });
     return {
@@ -62,12 +87,17 @@ async function execute() {
   // Return to the github action
   core.setOutput("output", out);
 
-  await octokit.rest.repos.getBranch({
+  const { data: pr } = await octokit.rest.pulls.create({
     owner: 'venkat785',
     repo: 'java-integrate',
-    branch: 'feature',
+    base: 'main',
+    head: 'jsdev',
+    title: 'title',
+    body: out
   });
 
+  // Write to the log
+  console.log('/nPR title = ' + pr.title);
 }
 
 execute().catch((e) => core.setFailed(e.message));
