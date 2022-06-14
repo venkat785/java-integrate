@@ -91,7 +91,7 @@ async function execute() {
     owner: 'venkat785',
     repo: 'java-integrate',
     base: 'main',
-    head: 'jsdev',
+    head: 'testbranch',
     title: 'Merge -> ' + head + ' to ' + base,
     body: head + '\n' + out,
   });
