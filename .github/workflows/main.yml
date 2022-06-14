@@ -9,13 +9,12 @@ jobs:
         id: Parameters
         uses: venkat785/java-integrate@main
         with:
-          owner: 'venkat785'
-          repository: 'java-integrate'
-          base: 'main'
-          head: 'jsdev'
+          owner: "venkat785"
+          repository: "java-integrate"
+          base: "main"
+          head: "testbranch"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       # Use the output from the `Parameters` step
-      - name: Get the output 
+      - name: Get the output
         run: echo "The output was ${{ steps.Parameters.outputs.output }}"
-        
