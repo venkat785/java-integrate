@@ -38,16 +38,6 @@ async function execute() {
     sha: branch.commit.sha,
   });
 
-  // Write to the log
-  console.log('\nbranch = ' + branch.name + ' sha = ' + branch.commit.sha);
-
-  const { data: { object } } = await octokit.git.createRef({
-    owner: owner,
-    repo: repository,
-    ref: 'refs/heads/version/1.0',
-    sha: branch.commit.sha,
-  });
-
 
   // Write to the log
   console.log('\new branch = ' + ' ' + ' sha = ' + object.sha);
