@@ -38,12 +38,6 @@ async function execute() {
     sha: branch.commit.sha,
   });
 
-  const { data: { object } } = await octokit.git.getTag({
-    owner: owner,
-    repo: repository,
-    tag_sha: branch.commit.sha,
-  });
-
 
   // Write to the log
   console.log('\new branch = ' + ' ' + ' sha = ' + object.sha);
