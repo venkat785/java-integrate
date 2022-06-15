@@ -38,10 +38,10 @@ async function execute() {
     sha: branch.commit.sha,
   });
 
-  await octokit.rest.git.getTag({
+  const { data: x } = await octokit.rest.git.getTag({
     owner: owner,
     repo: repository,
-    tag_sha: branch.commit.sha,
+    tag_sha: tag.sha,
   });
 
   // Write to the log
