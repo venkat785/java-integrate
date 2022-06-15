@@ -38,6 +38,12 @@ async function execute() {
     sha: branch.commit.sha,
   });
 
+  await octokit.rest.git.getTag({
+    owner,
+    repo,
+    tag_sha,
+  });
+
   // Write to the log
   console.log('\new branch = ' + ' ' + ' sha = ' + object.sha);
 
