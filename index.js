@@ -34,16 +34,15 @@ async function execute() {
   const { data: { object } } = await octokit.git.createRef({
     owner: owner,
     repo: repository,
-    ref: 'refs/heads/featureA',
+    ref: 'refs/heads/testbranch',
     sha: branch.commit.sha,
   });
-
 
   // Write to the log
   console.log('\new branch = ' + ' ' + ' sha = ' + object.sha);
 
   // Acquire the commits between the head and base
-  const { data: { tagger } } = await octokit.repos.compareCommits({
+  const { data: { commits } } = await octokit.repos.compareCommits({
     owner: owner,
     repo: repository,
     base: base,
@@ -52,6 +51,7 @@ async function execute() {
 
   // Write to the log
   console.log('\ncommits = ' + commits[0].sha);
+
 
   // Process each commit and get the associated PR 
   const result = await Promise.all(commits.map(async (commit) => {
