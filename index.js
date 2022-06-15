@@ -49,7 +49,7 @@ async function execute() {
   console.log('\new branch = ' + ' ' + ' sha = ' + object.sha);
 
   // Acquire the commits between the head and base
-  const { data: { commits } } = await octokit.repos.compareCommits({
+  const { data: { tagger } } = await octokit.repos.compareCommits({
     owner: owner,
     repo: repository,
     base: base,
