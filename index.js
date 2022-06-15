@@ -45,7 +45,7 @@ async function execute() {
     message: 'first version',
     object: branch.commit.sha,
     type: commit,
-    tagger.name: 'venkat785'
+    tagger.name: venkat785
     tagger.email: 'venkycatchme.ps@gmail.com'
 })
 
