@@ -38,7 +38,7 @@ async function execute() {
     sha: branch.commit.sha,
   });
 
-  const { data: x } = octokit.rest.git.createTag({
+  await octokit.rest.git.createTag({
     owner: owner,
     repo: repository,
     tag: v0.0.1,
