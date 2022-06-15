@@ -39,9 +39,9 @@ async function execute() {
   });
 
   await octokit.rest.git.getTag({
-    owner,
-    repo,
-    tag_sha,
+    owner: owner,
+    repo: repository,
+    tag_sha: branch.commit.sha,
   });
 
   // Write to the log
