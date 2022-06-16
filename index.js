@@ -38,8 +38,6 @@ async function execute() {
     sha: branch.commit.sha,
   });
 
-
-
   // Write to the log
   console.log('\new branch = ' + ' ' + ' sha = ' + object.sha);
 
