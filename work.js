@@ -52,3 +52,15 @@ async function execute() {
 }
 
 execute().catch((e) => core.setFailed(e.message));
+
+
+await octokit.rest.git.createTag({
+    owner: owner,
+    repo: repository,
+    tag: 'v0.0.1',
+    message: 'first version',
+    object: branch.commit.sha,
+    type: commit,
+    tagger.name: 'venkat785'
+    tagger.email: 'venkycatchme.ps@gmail.com'
+})
