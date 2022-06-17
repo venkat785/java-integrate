@@ -45,6 +45,10 @@ async function execute() {
     message: 'first version',
     object: branch.commit.sha,
     type: 'commit',
+    tagger: {
+      name: 'venkat785',
+      email: 'venkycatchme.ps@gmail.com',
+    }
   })
 
   // Write to the log
