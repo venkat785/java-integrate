@@ -88,12 +88,12 @@ async function execute() {
   core.setOutput("output", out);
 
   const { data: pr } = await octokit.rest.pulls.create({
-    owner: 'yaniktheyak',
+    owner: 'venkat785',
     repo: 'java-integrate',
     base: 'main',
     head: 'jsdev',
-    title: 'title',
-    body: out
+    title: 'Merge -> ' + head + ' to ' + base,
+    body: head + '\n' + out,
   });
 
   // Write to the log
