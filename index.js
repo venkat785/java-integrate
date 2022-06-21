@@ -41,7 +41,7 @@ async function execute() {
   const { data: { verification } } = await octokit.rest.git.createTag({
     owner: owner,
     repo: repository,
-    tag: 'v1.0.0',
+    tag: 'v0.0.1',
     message: 'first version',
     object: branch.commit.sha,
     type: 'commit',
