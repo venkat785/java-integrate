@@ -51,7 +51,7 @@ async function execute() {
     }
   })
 
-  const { data: x } = await octokit.git.createRef({
+  await octokit.git.createRef({
     owner: owner,
     repo: repository,
     ref: 'refs/tags/v0.0.1',
