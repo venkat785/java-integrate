@@ -12,7 +12,7 @@ jobs:
           owner: "venkat785"
           repository: "java-integrate"
           base: "main"
-          head: "jsdev"
+          head: "version/integrate-0.1.0"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       # Use the output from the `Parameters` step
