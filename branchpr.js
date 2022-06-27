@@ -38,6 +38,26 @@ async function execute() {
         sha: branch.commit.sha,
     });
 
+    const { data: { verification } } = await octokit.rest.git.createTag({
+        owner: owner,
+        repo: repository,
+        tag: 'v0.0.1',
+        message: 'first version',
+        object: branch.commit.sha,
+        type: 'commit',
+        tagger: {
+            name: 'venkat785',
+            email: 'venkycatchme.ps@gmail.com',
+        }
+    })
+
+    await octokit.git.createRef({
+        owner: owner,
+        repo: repository,
+        ref: 'refs/tags/v0.0.1',
+        sha: branch.commit.sha,
+    });
+
     // Write to the log
     console.log('\new branch = ' + ' ' + ' sha = ' + object.sha);
 

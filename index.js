@@ -34,14 +34,14 @@ async function execute() {
   const { data: { object } } = await octokit.git.createRef({
     owner: owner,
     repo: repository,
-    ref: 'refs/heads/testbranch',
+    ref: 'refs/heads/release/0.1.0',
     sha: branch.commit.sha,
   });
 
   const { data: { verification } } = await octokit.rest.git.createTag({
     owner: owner,
     repo: repository,
-    tag: 'v0.0.1',
+    tag: 'v0.0.2',
     message: 'first version',
     object: branch.commit.sha,
     type: 'commit',
@@ -54,7 +54,7 @@ async function execute() {
   await octokit.git.createRef({
     owner: owner,
     repo: repository,
-    ref: 'refs/tags/v0.0.1',
+    ref: 'refs/tags/v0.0.2',
     sha: branch.commit.sha,
   });
 
