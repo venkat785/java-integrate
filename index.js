@@ -60,7 +60,7 @@ async function execute() {
   await octokit.git.createRef({
     owner: owner,
     repo: repository,
-    ref: 'refs/tags/v0.0.3',
+    ref: 'refs/tags/v0.0.4',
     sha: branch.commit.sha,
   });
 
