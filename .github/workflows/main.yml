@@ -1,4 +1,10 @@
-on: [push] #on every push.
+name: Added Parameters
+
+on:
+  workflow_run:
+    workflows: ["notify the main workflow"]
+    types:
+      - completed
 
 jobs:
   adding-parameters:
