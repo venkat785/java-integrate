@@ -5,5 +5,10 @@ on: push
 jobs:
   calling-another-github-action:
     runs-on: ubuntu-latest
-    name: calling workflow
-    run: echo "parameters job will run"
+    steps:
+      - name: calling workflow
+        run: echo "parameters job will run"
+      - name: shell commands
+        run: |
+          node -v
+          npm -v
