@@ -1,0 +1,16 @@
+name: testing3
+
+on:
+  workflow_run:
+    workflows: ["testing2"]
+    types:
+      - completed
+
+jobs:
+  calling-another-github-action:
+    runs-on: ubuntu-latest
+    steps:
+      - name: calling workflow
+        run: echo "testyaml3"
+      - name: calling workflow2
+        run: echo "nextjob is test4"
